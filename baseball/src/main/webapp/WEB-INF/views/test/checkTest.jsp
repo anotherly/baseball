@@ -7,16 +7,25 @@
 	pageEncoding="EUC-KR"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+
 <c:set value="${ paramValues.chk}" var="abc" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title> 
+<script type="text/javascript">
+	function pay(){
+		var newwin = window.open('_blank','winname','width=500, height=300');
+		var fr = document.frm;
+		fr.action = "insertticket";
+		frm.target= 'winname';
+		frm.submit();
+		};
+</script>
 </head>
 <body>
 	<%-- <% String a = request.getParameter("chk");%> --%>
-
 
 	${param.stadium }
 	<br> ${param.seat}
@@ -28,10 +37,11 @@
 	<%-- <input type="text" value="${param.stadium }" name="stadium"/>
 <input type="text" value="${param.seat }" name="grade"/>
 <input type="text" value="${param.line }" name="line"/> --%>
-	<form action="insertticket" method="post">
-
+	<form action="insertticket" method="post" name="frm">
+		<input type="hidden" value="${param.user_id }" name="user_id"/>
+		<input type="hidden" value="${param.stadium }" name="stadium" />
 		<c:forEach items="${abc}" var="i" varStatus="num">
-
+		
 			<c:set value="${param.stadium }" var="stadium" />
 			<c:set value="${param.seat }" var="seat" />
 			<c:set value="${param.stadium }${i }${param.seat }" var="ticketinfo" />
@@ -77,7 +87,8 @@ ${param.cnt * 4000 }
 <input type="hidden" value="${param.cnt * 4000 }" name="money" />
 			</c:when>
 		</c:choose>
-		예매하시겠습니까 ? <input type="submit" value="다음단계" />
+		예매하시겠습니까 ? <a href="javascript:pay()">가즈아~</a>
+		
 	</form>
 </body>
 </html>

@@ -3,9 +3,11 @@
 
 	<form action="card3" method="post">
 	<!-- 성공적! -->
+		<input type="hidden" value="${param.user_id }" name="user_id"/>
 	<input type="hidden" value="${param.user_name }" name="user_name"/>
 	<input type="hidden" value="${param.user_phone}" name="user_phone"/>
 	<input type="hidden" value="${param.money }" name="money"/>
+	<input type="hidden" value="${param.stadium }" name="stadium" />
 	<!-- 노터치! -->	
 		<table border="1">
 			<tr>

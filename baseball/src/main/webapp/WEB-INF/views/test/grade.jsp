@@ -11,6 +11,7 @@
 <body>
 <form action="ticket" method="post">
 <input type="hidden" value="SAMSUNG" name="stadium"/>
+<input type="hidden" value="${loginVo.userid }" name="user_id"/>
 <table border=1>
 <tr>
 <td>

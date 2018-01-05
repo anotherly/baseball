@@ -1,13 +1,35 @@
 package baseball.ticket.model;
 
+import java.util.Date;
+
 import org.apache.ibatis.type.Alias;
 
 @Alias("ticketReservation")
 public class TicketResVo {
 
-	String ticketinfo, user_name, user_phone, money;
+	String stadium, user_name, user_phone, money;
 
-	String user_id = "aaaa";
+	String user_id;
+	
+	Date payday;
+
+	
+	
+	public String getStadium() {
+		return stadium;
+	}
+
+	public void setStadium(String stadium) {
+		this.stadium = stadium;
+	}
+
+	public Date getPayday() {
+		return payday;
+	}
+
+	public void setPayday(Date payday) {
+		this.payday = payday;
+	}
 
 	public String getUser_id() {
 		return user_id;
@@ -17,13 +39,6 @@ public class TicketResVo {
 		this.user_id = user_id;
 	}
 
-	public String getTicketinfo() {
-		return ticketinfo;
-	}
-
-	public void setTicketinfo(String ticketinfo) {
-		this.ticketinfo = ticketinfo;
-	}
 
 	public String getUser_name() {
 		return user_name;
@@ -51,8 +66,8 @@ public class TicketResVo {
 
 	@Override
 	public String toString() {
-		return "TicketResVo [user_id=" + user_id + ", ticketinfo=" + ticketinfo + ", user_name=" + user_name
-				+ ", user_phone=" + user_phone + ", money=" + money + "]";
+		return "TicketResVo [stadium=" + stadium + ", user_name=" + user_name + ", user_phone=" + user_phone
+				+ ", money=" + money + ", user_id=" + user_id + ", payday=" + payday + "]";
 	}
 
 }

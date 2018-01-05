@@ -6,21 +6,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
 <script type="text/javascript">
-	$(function() {
-		var flag = "${requestScope.flag}";
-		if (flag == "1") {
-			alert("메롱");
-			window.open('', '_self', '');
-			window.close();
-		}
-	});
+	function complete(){
+ 
+		frm.action = "payment";
+		frm.submit();
+		 	alert('결제가 완료되었습니다');
+		};
+		
+	function closewindow(){
+ 		if(confirm('현재페이지를 닫으시겠습니까?')){
+			self.close();
+			window.opener.close();
+ 		}
+	}
 </script>
 </head>
 <body>
-	<form action="payment" method="post">
+	<form action="payment" method="post" name="frm">
+		<input type="hidden" value="${param.user_id }" name="user_id"/>
 	<input type="hidden" value="${param.user_name }" name="user_name"/>
 	<input type="hidden" value="${param.user_phone}" name="user_phone"/>
 	<input type="hidden" value="${param.money }" name="money"/>
+	<input type="hidden" value="${param.stadium }" name="stadium" />
 		<table border=1>
 			<tr>
 				<td>판매자</td>
@@ -43,8 +50,8 @@
 				<td colspan="2" align="right">('-'없이 카드번호만 입력해주세요.)</td>
 			</tr>
 			<tr align="center">
-				<td colspan="3"><a href="card2">취소</a><input type="submit"
-					value="결제하기" /></td>
+				<td colspan="3"><a href="card2">취소</a>
+<a href="javascript:complete()">돌아가즈아~</a></td>
 			</tr>
 		</table>
 	</form>

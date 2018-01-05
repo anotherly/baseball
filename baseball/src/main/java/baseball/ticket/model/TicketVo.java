@@ -13,9 +13,19 @@ public class TicketVo {
 	String listt;
 	String line;
 	Integer paid;
+	String user_id;
 	
 	ArrayList<TicketVo> reallist;
 	
+	
+
+	public String getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(String user_id) {
+		this.user_id = user_id;
+	}
 
 	public Integer getPaid() {
 		return paid;

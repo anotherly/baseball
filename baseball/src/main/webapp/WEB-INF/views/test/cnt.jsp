@@ -89,6 +89,7 @@ input[type=checkbox]:disabled+label {
 	<br>
 
 	<form action="checkTest" method="post">
+	<input type="hidden" value="${param.user_id }" name="user_id"/>
 		<input type="hidden" value="${param.stadium }" name="stadium" /> <input
 			type="hidden" value="${param.cnt }" name="cnt" /> <input
 			type="hidden" value="${param.seat }" name="seat" />

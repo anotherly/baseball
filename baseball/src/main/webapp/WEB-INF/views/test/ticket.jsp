@@ -11,6 +11,7 @@
 ${param.stadium }<br>
 ${param.seat}
 	<form action="cnt" method="post" >
+		<input type="hidden" value="${param.user_id }" name="user_id"/>
 		<input type="hidden" value="${param.stadium }" name="stadium"/>
 		<input type="hidden" value="${param.seat }" name="seat"/>
 		<table>
