@@ -8,6 +8,9 @@
 	<input type="hidden" value="${param.user_phone}" name="user_phone"/>
 	<input type="hidden" value="${param.money }" name="money"/>
 	<input type="hidden" value="${param.stadium }" name="stadium" />
+			<input type="hidden" value="${param.match_year}" name="match_year"/>
+<input type="hidden" value="${param.match_month}" name="match_month"/>
+<input type="hidden" value="${param.match_day}" name="match_day"/>
 	<!-- ³ëÅÍÄ¡! -->	
 		<table border="1">
 			<tr>

@@ -28,6 +28,9 @@
 	<input type="hidden" value="${param.user_phone}" name="user_phone"/>
 	<input type="hidden" value="${param.money }" name="money"/>
 	<input type="hidden" value="${param.stadium }" name="stadium" />
+			<input type="hidden" value="${param.match_year}" name="match_year"/>
+<input type="hidden" value="${param.match_month}" name="match_month"/>
+<input type="hidden" value="${param.match_day}" name="match_day"/>
 		<table border=1>
 			<tr>
 				<td>판매자</td>
@@ -38,8 +41,9 @@
 				<td>: ${param.money }</td>
 			</tr>
 			<tr>
-				<td>날짜</td>
-				<td>: 날짜넣어라ㅏㅏㅏㅏ</td>
+				<td>내용</td>
+				<td>${param.match_year }년 ${param.match_month }월 ${param.match_day }일<br>
+				${param.stadium } 홈 경기</td>
 			</tr>
 			<tr>
 				<td>카드번호</td>

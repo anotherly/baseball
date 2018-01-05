@@ -19,6 +19,9 @@ window.onload=function(){
      		<input type="hidden" value="${param.user_id }" name="user_id"/>
 		<input type="hidden" value="${param.money }" name="money" /> <!-- 값넘어온거확인했음! -->
 		<input type="hidden" value="${param.stadium }" name="stadium" />
+			<input type="hidden" value="${param.match_year}" name="match_year"/>
+<input type="hidden" value="${param.match_month}" name="match_month"/>
+<input type="hidden" value="${param.match_day}" name="match_day"/>
 		<table border="1">
 			<tr>
 				<td style="width: 120px;">이름</td>

@@ -11,10 +11,16 @@
 ${param.stadium }<br>
 ${param.seat}
 	<form action="cnt" method="post" >
+<%-- 	 	<input type="hidden" value="${param.match_year}" name="match_year"/>
+<input type="hidden" value="${param.match_month}" name="match_month"/>
+<input type="hidden" value="${param.match_day}" name="match_day"/> --%>
+<input type="text" value="${data.dd.match_year }" name="match_year"/>
+<input type="text" value="${data.dd.match_month }" name="match_month"/>
+<input type="text" value="${data.dd.match_day }" name="match_day"/>
 		<input type="hidden" value="${param.user_id }" name="user_id"/>
 		<input type="hidden" value="${param.stadium }" name="stadium"/>
 		<input type="hidden" value="${param.seat }" name="seat"/>
-		<table>
+				<table>
 		<tr>
 			<td>
 			<select name="cnt" id="cnt">

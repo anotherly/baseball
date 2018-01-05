@@ -40,6 +40,11 @@
 	<form action="insertticket" method="post" name="frm">
 		<input type="hidden" value="${param.user_id }" name="user_id"/>
 		<input type="hidden" value="${param.stadium }" name="stadium" />
+			<input type="hidden" value="${param.match_year}" name="match_year"/>
+<input type="hidden" value="${param.match_month}" name="match_month"/>
+<input type="hidden" value="${param.match_day}" name="match_day"/>
+		
+		
 		<c:forEach items="${abc}" var="i" varStatus="num">
 		
 			<c:set value="${param.stadium }" var="stadium" />

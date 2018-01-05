@@ -10,8 +10,16 @@
 </head>
 <body>
 <form action="ticket" method="post">
+
+<!-- 병화형님 value에다가 형이 넘겨주신방식으로 넣으시면됩니다 -->
 <input type="hidden" value="SAMSUNG" name="stadium"/>
+<input type="text" value="2018" name="match_year"/>
+<input type="text" value="1" name="match_month"/>
+<input type="text" value="24" name="match_day"/>
+
+<!--  여기까지     -->
 <input type="hidden" value="${loginVo.userid }" name="user_id"/>
+
 <table border=1>
 <tr>
 <td>

@@ -14,10 +14,35 @@ public class TicketVo {
 	String line;
 	Integer paid;
 	String user_id;
+	Integer match_year, match_month, match_day;
 	
 	ArrayList<TicketVo> reallist;
+
 	
-	
+
+	public Integer getMatch_year() {
+		return match_year;
+	}
+
+	public void setMatch_year(Integer match_year) {
+		this.match_year = match_year;
+	}
+
+	public Integer getMatch_month() {
+		return match_month;
+	}
+
+	public void setMatch_month(Integer match_month) {
+		this.match_month = match_month;
+	}
+
+	public Integer getMatch_day() {
+		return match_day;
+	}
+
+	public void setMatch_day(Integer match_day) {
+		this.match_day = match_day;
+	}
 
 	public String getUser_id() {
 		return user_id;
@@ -87,7 +112,8 @@ public class TicketVo {
 	@Override
 	public String toString() {
 		return "TicketVo [stadium=" + stadium + ", seat=" + seat + ", ticketinfo=" + ticketinfo + ", listt=" + listt
-				+ ", line=" + line + ",  reallist=" + reallist + "]";
+				+ ", line=" + line + ", paid=" + paid + ", user_id=" + user_id + ", match_year=" + match_year
+				+ ", match_month=" + match_month + ", match_day=" + match_day + ", reallist=" + reallist + "]";
 	}
 
 	
